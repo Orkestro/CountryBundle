@@ -9,10 +9,10 @@ class ConfigureMenuListener extends AbstractMenuListener
 {
     public function onMenuConfigure(ConfigureMenuEvent $event)
     {
-        $menu = $event->getMenu();
+        $menu = $event->getMenu('configuration');
 
         $menu->addChild('country', array(
-                'route' => 'orkestro_backend_country',
+                'route' => 'orkestro_backend_country_list',
             ))->setLabel($this->translate('orkestro.backend.country'));;
     }
 }
